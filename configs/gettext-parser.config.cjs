@@ -7,5 +7,4 @@ module.exports = {
     _nx: ['msgid', 'msgid_plural', null, 'msgctxt'],
   },
   trim: true,
-  filename: true,
 }
