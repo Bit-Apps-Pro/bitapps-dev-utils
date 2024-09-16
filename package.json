@@ -11,13 +11,17 @@
     "bitapps-plugin-build": "./bin/generate-production-build.mjs",
     "bitapps-plugin-sync-deps": "./bin/add-free-deps-to-pro.mjs",
     "bitapps-plugin-i18n": "./bin/generate-i18n.mjs",
-    "bitapps-plugin-create-symlink": "./bin/create-symlink.mjs"
+    "bitapps-plugin-create-symlink": "./bin/create-symlink.mjs",
+    "bitapps-plugin-clean-node": "./bin/clean-node-modules.mjs"
   },
   "scripts": {
     "lint": "eslint . --fix"
   },
   "peerDependencies": {
     "lodash": "^4.17.21"
+  },
+  "dependencies": {
+    "rimraf": "^6.0.1"
   },
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
