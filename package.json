@@ -1,0 +1,21 @@
+{
+  "name": "bitapps-dev-utils",
+  "version": "0.0",
+  "description": "",
+  "main": "index.js",
+  "bin": {
+    "update-plugin-version": "./bin/update-version.mjs"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "commander": "^12.1.0"
+  },
+  "dependencies": {
+    "pnpm": "^9.10.0"
+  }
+}
