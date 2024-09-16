@@ -21,7 +21,7 @@ const { PLUGIN_SLUG } = dotenv.config().parsed
 const execOptions = { stdio: 'inherit' }
 
 const FRONTEND_POT_FILE = 'languages/frontend.pot'
-const GETTEXT_PARSER_CONFIG = '../configs/gettext-parser.config.cjs'
+const GETTEXT_PARSER_CONFIG = './.configs/gettext-parser.config.cjs'
 const GETTEXT_PARSER_FILES_GLOB
   = './frontend/**/{*.js,*.jsx,*.ts,*.tsx} ./pro/frontend-pro/pro-module/src/**/{*.js,*.jsx,*.ts,*.tsx}'
 const FRONTEND_EXTRACTED_STRINGS_PHP_FILE = 'languages/frontend-extracted-strings.php'
