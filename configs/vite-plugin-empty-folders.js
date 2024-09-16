@@ -8,10 +8,11 @@ export default function emptyFoldersPlugin(folders) {
   return {
     name: 'vite-plugin-empty-folders',
     buildStart() {
-      folders.forEach(folder => {
+      folders.forEach((folder) => {
+        // eslint-disable-next-line no-console
         console.log(`Emptying folder: ${folder}`)
         fse.remove(folder)
       })
-    }
+    },
   }
 }

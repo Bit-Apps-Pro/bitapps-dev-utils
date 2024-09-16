@@ -2,17 +2,19 @@
   "name": "bitapps-dev-utils",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
-  "bin": {
-    "update-plugin-version": "./bin/update-version.mjs"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "keywords": [],
   "author": "",
   "license": "ISC",
+  "keywords": [],
+  "main": "index.js",
+  "bin": {
+    "bitapps-update-plugin-version": "./bin/update-version.mjs"
+  },
+  "scripts": {
+    "lint": "eslint . --fix"
+  },
   "devDependencies": {
-    "commander": "^12.1.0"
+    "@antfu/eslint-config": "^3.6.2",
+    "commander": "^12.1.0",
+    "eslint": "^9.10.0"
   }
 }
