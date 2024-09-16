@@ -9,7 +9,6 @@
   "bin": {
     "bitapps-plugin-update-version": "./bin/update-version.mjs",
     "bitapps-plugin-build": "./bin/generate-production-build.mjs",
-    "bitapps-plugin-sync-deps": "./bin/add-free-deps-to-pro.mjs",
     "bitapps-plugin-i18n": "./bin/generate-i18n.mjs",
     "bitapps-plugin-create-symlink": "./bin/create-symlink.mjs",
     "bitapps-plugin-clean-node": "./bin/clean-node-modules.mjs"
