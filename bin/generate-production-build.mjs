@@ -8,7 +8,7 @@ import { exit } from 'node:process'
 
 import { program } from 'commander'
 import fse from 'fs-extra'
-import { commandExistsSync, copyFilesAndFolders, exitIfNotLinux } from './build-helpers.mjs'
+import { commandExistsSync, copyFilesAndFolders, exitIfNotLinux } from '../utils/build-helpers.mjs'
 
 program
   .name('generate-free-build')
