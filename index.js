@@ -1,1 +1,1 @@
-export {}
+export { default } from './configs/vite-plugin-empty-folders.js'
