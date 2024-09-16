@@ -83,6 +83,7 @@ async function updateVersion({ filePath, version, regex, replacement }) {
 
     fs.writeFileSync(filePathResolved, updatedData, 'utf8')
 
+    // eslint-disable-next-line no-console
     console.log(`✔️  ${filePath} version updated to ${version}`)
   }
   catch (error) {

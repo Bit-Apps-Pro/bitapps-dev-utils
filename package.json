@@ -7,14 +7,27 @@
   "keywords": [],
   "main": "index.js",
   "bin": {
-    "bitapps-update-plugin-version": "./bin/update-version.mjs"
+    "bitapps-plugin-update-version": "./bin/update-version.mjs",
+    "bitapps-plugin-build": "./bin/generate-production-build.mjs",
+    "bitapps-plugin-sync-deps": "./bin/add-free-deps-to-pro.mjs",
+    "bitapps-plugin-i18n": "./bin/generate-i18n.mjs",
+    "bitapps-plugin-create-symlink": "./bin/create-symlink.mjs"
   },
   "scripts": {
     "lint": "eslint . --fix"
   },
+  "peerDependencies": {
+    "lodash": "^4.17.21"
+  },
   "devDependencies": {
     "@antfu/eslint-config": "^3.6.2",
     "commander": "^12.1.0",
-    "eslint": "^9.10.0"
+    "eslint": "^9.10.0",
+    "fs-extra": "^11.2.0"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "gettext-parser": "^8.0.0",
+    "react-gettext-parser": "^1.16.0"
   }
 }
