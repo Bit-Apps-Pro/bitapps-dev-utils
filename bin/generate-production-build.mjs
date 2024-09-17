@@ -3,6 +3,7 @@
 /* eslint-disable no-console */
 import { execSync } from 'node:child_process'
 import fs from 'node:fs'
+import fse from 'fs-extra'
 import path from 'node:path'
 import { exit } from 'node:process'
 
@@ -108,7 +109,7 @@ execSync('composer install --no-dev', { cwd: outputDirectory, stdio: 'inherit' }
 execSync('composer dump-autoload -o', { cwd: outputDirectory, stdio: 'inherit' })
 
 // remove composer.lock
-fs.rmSync(`${outputDirectory}/composer.lock`)
+fse.remove(`${outputDirectory}/composer.lock`)
 
 // create zip file
 if (zip)
