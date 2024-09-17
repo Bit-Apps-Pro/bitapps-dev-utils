@@ -3,11 +3,10 @@
 /* eslint-disable no-console */
 import { execSync } from 'node:child_process'
 import fs from 'node:fs'
-import fse from 'fs-extra'
 import path from 'node:path'
 import { exit } from 'node:process'
-
 import { program } from 'commander'
+
 import fse from 'fs-extra'
 import { commandExistsSync, copyFilesAndFolders, exitIfNotLinux } from '../utils/build-helpers.mjs'
 
