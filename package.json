@@ -1,10 +1,10 @@
 {
   "name": "bitapps-dev-utils",
+  "type": "module",
   "version": "1.0.0",
-  "description": "",
-  "author": "",
+  "description": "Development utilities for BitApps products",
+  "author": "Bit Apps Team",
   "license": "ISC",
-  "keywords": [],
   "main": "index.mjs",
   "module": "index.mjs",
   "bin": {
