@@ -1,11 +1,15 @@
 import { existsSync, mkdirSync, writeFileSync } from 'node:fs'
 import { join } from 'node:path'
+import process from 'node:process'
 
 export default function generateBuildCodeNamePlugin({ codeName, dir }) {
   return {
     name: 'vite-plugin-build-code-name',
 
     closeBundle() {
+      if (process.env.NODE_ENV !== 'production')
+        return
+
       try {
         const outputDir = dir
 

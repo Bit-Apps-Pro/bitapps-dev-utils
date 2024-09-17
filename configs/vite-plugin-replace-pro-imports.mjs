@@ -1,3 +1,5 @@
+import process from 'node:process'
+
 /**
  * Replace imports of pro modules with the correct URL
  * @param {serverVarName} param0 - The name of the server variable that holds the pro module URL
@@ -7,6 +9,9 @@ export default function replaceProImports({ serverVarName }) {
   return {
     name: 'replace-pro-imports',
     generateBundle(_, bundle) {
+      if (process.env.NODE_ENV !== 'production')
+        return
+
       for (const key in bundle) {
         if (bundle[key].code) {
           const proModuleImportFindRegex = /"((?:\.{1,2}\/)+)bit-pi-pro\/assets\/(pro-module-[^"]+)"/g
