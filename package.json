@@ -5,7 +5,8 @@
   "author": "",
   "license": "ISC",
   "keywords": [],
-  "main": "index.js",
+  "main": "index.mjs",
+  "module": "index.mjs",
   "bin": {
     "bitapps-plugin-update-version": "./bin/update-version.mjs",
     "bitapps-plugin-build": "./bin/generate-production-build.mjs",
