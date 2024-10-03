@@ -1,3 +1,4 @@
+export { default as eslintRulesNoImportFromSubmodule } from './configs/eslint-plugin-no-import-from-submodule'
 export { default as eslintRulesNoProModuleImport } from './configs/eslint-rules-no-pro-module-import.mjs'
 export { default as generateBuildCodeNamePlugin } from './configs/vite-plugin-build-code-name.mjs'
 export { default as emptyFoldersPlugin } from './configs/vite-plugin-empty-folders.mjs'
