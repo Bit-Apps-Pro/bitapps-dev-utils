@@ -1,7 +1,7 @@
 {
   "name": "bitapps-dev-utils",
   "type": "module",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Development utilities for BitApps products",
   "author": "Bit Apps Team",
   "license": "ISC",
