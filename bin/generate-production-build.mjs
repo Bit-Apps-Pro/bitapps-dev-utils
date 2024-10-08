@@ -99,7 +99,7 @@ if (!fs.existsSync(path.resolve('../', proPluginSlug))) {
 
 // build frontend
 if (!nobuild)
-  execSync('pnpm run build -l error', { stdio: 'inherit' })
+  execSync('pnpm run build:silent', { stdio: 'inherit' })
 
 await copyFilesAndFolders(filesAndFolders, outputDirectory)
 
