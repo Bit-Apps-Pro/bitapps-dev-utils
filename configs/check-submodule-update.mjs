@@ -1,12 +1,13 @@
 import { execSync } from 'node:child_process'
 import path from 'node:path'
+import process from 'node:process'
 
-function runCommand(command: string, cwd = process.cwd()) {
+function runCommand(command, cwd = process.cwd()) {
   try {
     return execSync(command, { cwd, stdio: 'pipe', encoding: 'utf8' }).trim()
-  } catch {
+  }
+  catch {
     console.error(`Error executing command: ${command}`)
-    return
   }
 }
 
@@ -44,7 +45,8 @@ export default function checkForSubmoduleUpdates() {
     }
 
     return false // All submodules are up to date
-  } catch (error) {
+  }
+  catch (error) {
     console.error('Failed to check for submodule updates:', error)
     return false
   }
