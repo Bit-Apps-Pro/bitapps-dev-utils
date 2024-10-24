@@ -1,4 +1,4 @@
-import checkForSubmoduleUpdates from './check-submodule-update'
+import checkForSubmoduleUpdates from './check-submodule-update.mjs'
 
 export default function checkSubmoduleUpdatesPlugin() {
   return {
