@@ -5,7 +5,7 @@ export default function checkSubmoduleUpdatesPlugin() {
   return {
     name: 'vite-plugin-check-submodule-updates',
 
-    config(_: UserConfig, { mode }: { mode: string }) {
+    config(_, { mode }) {
       if (mode === 'production') return
 
       const hasSubmoduleUpdates = checkForSubmoduleUpdates()
