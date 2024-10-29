@@ -55,12 +55,6 @@ await Promise.all([
     replacement: `"version": "${version}"`,
   }),
   updateVersion({
-    filePath: `pro/frontend-pro/pro-module/package.json`,
-    version,
-    regex: /"version":\s*"([\d.]+)"/,
-    replacement: `"version": "${version}"`,
-  }),
-  updateVersion({
     filePath: 'backend/app/Config.php',
     version,
     regex: /VERSION\s*=\s*'[\d.]+';/,
