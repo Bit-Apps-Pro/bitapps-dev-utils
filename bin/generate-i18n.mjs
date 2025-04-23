@@ -2,6 +2,9 @@
 
 import { execSync } from 'node:child_process'
 import { existsSync, mkdirSync } from 'node:fs'
+import { exitIfNotLinux, exitIfWpCliNotInstalled } from '../utils/build-helpers.mjs'
+
+import { convertPOTToPHP } from '../utils/pot-to-php.mjs'
 /**
  * Translation (i18n) Generation Commands
  *
@@ -12,18 +15,15 @@ import { existsSync, mkdirSync } from 'node:fs'
  *
  * Contributors: Script originally written by @anisurov, refactored by @arif-un.
  */
-import dotenv from 'dotenv'
+import 'dotenv/config'
 
-import { exitIfNotLinux, exitIfWpCliNotInstalled } from '../utils/build-helpers.mjs'
-import { convertPOTToPHP } from '../utils/pot-to-php.mjs'
-
-const { PLUGIN_SLUG } = dotenv.config().parsed
+const { PLUGIN_SLUG } = process.env
 const execOptions = { stdio: 'inherit' }
 
 const FRONTEND_POT_FILE = 'languages/frontend.pot'
 const GETTEXT_PARSER_CONFIG = './.config/_plugin-commons/.gettext-parser.config.cjs'
-const GETTEXT_PARSER_FILES_GLOB
-  = './frontend/**/{*.js,*.jsx,*.ts,*.tsx} ./pro/frontend-pro/pro-module/src/**/{*.js,*.jsx,*.ts,*.tsx}'
+const GETTEXT_PARSER_FILES_GLOB =
+  './frontend/**/{*.js,*.jsx,*.ts,*.tsx} ./pro/frontend-pro/pro-module/src/**/{*.js,*.jsx,*.ts,*.tsx}'
 const FRONTEND_EXTRACTED_STRINGS_PHP_FILE = 'languages/frontend-extracted-strings.php'
 
 const POT_FILE_HEADER = JSON.stringify({
@@ -35,8 +35,7 @@ const POT_FILE_HEADER = JSON.stringify({
 exitIfNotLinux()
 exitIfWpCliNotInstalled()
 
-if (!existsSync('languages'))
-  mkdirSync('languages')
+if (!existsSync('languages')) mkdirSync('languages')
 
 execSync(
   `pnpm react-gettext-parser --output ${FRONTEND_POT_FILE} --config ${GETTEXT_PARSER_CONFIG}  ${GETTEXT_PARSER_FILES_GLOB}`,
